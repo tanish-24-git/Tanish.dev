@@ -26,7 +26,8 @@ export function SocialSidebarTop() {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.5 }}
-      className="fixed right-8 top-20 z-40 hidden lg:flex flex-col items-center gap-6"
+      className="fixed right-4 top-20 z-50 hidden lg:flex flex-col items-center gap-6"
+      style={{ right: '1rem', top: '5rem' }}
     >
       <div className="w-[2px] h-24 bg-slate-300 dark:bg-slate-700 mb-4" />
       {socials.map((social, index) => (
