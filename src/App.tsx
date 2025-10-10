@@ -1,3 +1,4 @@
+// src/App.tsx
 import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { SocialSidebar } from "./components/SocialSidebar";
@@ -9,9 +10,11 @@ import { Projects } from "./components/Projects";
 import { Experience } from "./components/Experience";
 import { Contact } from "./components/Contact";
 import { CustomCursor } from "./components/CustomCursor";
+import { SplashScreen } from "./components/SplashScreen";
 
 export default function App() {
   const [isDark, setIsDark] = useState(true);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     // Check for saved theme preference or default to dark
@@ -35,6 +38,14 @@ export default function App() {
       localStorage.setItem("theme", "light");
     }
   };
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+
+  if (showSplash) {
+    return <SplashScreen onComplete={handleSplashComplete} />;
+  }
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300">
