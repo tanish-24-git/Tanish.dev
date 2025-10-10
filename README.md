@@ -17,7 +17,6 @@ Start development server
 Build for production
 ```npm run build```
 
-text
 
 ## 🛠️ Tech Stack
 
