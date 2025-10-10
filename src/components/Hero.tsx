@@ -84,18 +84,17 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="relative flex justify-center lg:justify-end"
         >
-          <div className="relative w-80 h-80">
+          <div className="relative w-80 h-80 group">
             {/* Accent border */}
             <div className="absolute inset-0 border-4 border-teal-500 rounded-lg translate-x-6 translate-y-6 z-0" />
             
             {/* Image container */}
-            <div className="relative w-full h-full bg-teal-500/10 rounded-lg overflow-hidden z-10">
+            <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded-lg overflow-hidden z-10">
               <img
                 src={profileImg}
                 alt="Tanish Jagtap"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                className="w-full h-full object-cover group-hover:grayscale transition-all duration-300"
               />
-              <div className="absolute inset-0 bg-teal-500/20 hover:bg-transparent transition-colors duration-300" />
             </div>
           </div>
         </motion.div>
