@@ -1,7 +1,9 @@
+// src/components/Hero.tsx
 import { motion } from "motion/react";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImg from "figma:asset/53dad4d1d2dd8de6e03978506321632dde708ea8.png";
+import resumePDF from "../assets/tanish-resume.pdf";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -9,6 +11,16 @@ export function Hero() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = resumePDF;
+    link.download = 'Tanish_Jagtap_Resume.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -69,6 +81,7 @@ export function Hero() {
             </Button>
             <Button
               variant="outline"
+              onClick={downloadResume}
               className="border-2 border-teal-500 text-teal-500 hover:bg-teal-500/10"
             >
               <Download className="mr-2" size={18} />
@@ -84,16 +97,16 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="relative flex justify-center lg:justify-end"
         >
-          <div className="relative w-80 h-80">
+          <div className="relative w-80 h-80 group">
             {/* Accent border */}
             <div className="absolute inset-0 border-4 border-teal-500 rounded-lg translate-x-6 translate-y-6 z-0" />
             
-            {/* Image container with hover effect */}
-            <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded-lg overflow-hidden z-10 group cursor-pointer">
+            {/* Image container */}
+            <div className="relative w-full h-full bg-slate-50 dark:bg-slate-800 rounded-lg overflow-hidden z-10 cursor-pointer">
               <img
                 src={profileImg}
                 alt="Tanish Jagtap"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:grayscale transition-all duration-300"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 ease-in-out" />
             </div>
