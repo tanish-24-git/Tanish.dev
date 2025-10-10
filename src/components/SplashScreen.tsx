@@ -34,7 +34,13 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
             ease: "easeOut"
           }}
         >
-          <h1 className="text-9xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] 2xl:text-[20rem] font-bold text-slate-900 dark:text-slate-100 mb-4 leading-none">
+          <h1 
+            className="font-bold text-slate-900 dark:text-slate-100 mb-4 leading-none"
+            style={{ 
+              fontSize: 'clamp(4rem, 15vw, 16rem)',
+              lineHeight: '0.9'
+            }}
+          >
             Tanish
             <span className="text-teal-500">.dev</span>
           </h1>
