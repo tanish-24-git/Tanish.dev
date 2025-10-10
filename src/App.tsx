@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { SocialSidebar } from "./components/SocialSidebar";
+import { SocialSidebarTop } from "./components/SocialSidebarTop";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
@@ -45,8 +46,9 @@ export default function App() {
       {/* Header */}
       <Header isDark={isDark} toggleTheme={toggleTheme} />
 
-      {/* Social Sidebar */}
+      {/* Social Sidebars */}
       <SocialSidebar />
+      <SocialSidebarTop />
 
       {/* Main Content */}
       <main>
