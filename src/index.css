@@ -2028,3 +2028,44 @@ body {
   syntax: "*";
   inherits: false
 }
+/* ======================================= */
+/* ENHANCED HERO BACKGROUND TEXT STYLES   */
+/* ======================================= */
+
+/* Advanced text rendering for background elements */
+.hero-bg-text {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  font-variation-settings: 'wght' 900;
+  letter-spacing: -0.05em;
+  contain: layout style;
+  isolation: isolate;
+}
+
+/* Add this to your src/index.css file */
+
+/* Dark mode adjustments for background text */
+.dark .hero-bg-text-massive {
+  color: #334155 !important;
+}
+
+.dark .hero-bg-text-massive.teal {
+  color: #0f766e !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .hero-bg-text-massive {
+    opacity: 0.02 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-bg-text-massive {
+    opacity: 0.015 !important;
+  }
+}

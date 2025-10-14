@@ -24,14 +24,139 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+      {/* Background Text Filling Entire Homepage - No Blank Space */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+        
+        {/* Row 1 - Top */}
+        <div 
+          className="absolute font-black tracking-tight"
+          style={{
+            fontSize: 'clamp(7rem, 18vw, 24rem)',
+            lineHeight: '0.85',
+            color: '#64748b',
+            opacity: '0.06',
+            fontFamily: 'Inter, -apple-system, sans-serif',
+            fontWeight: '900',
+            top: '-8%',
+            left: '-5%',
+            transform: 'rotate(-15deg)',
+            zIndex: 1,
+            whiteSpace: 'nowrap'
+          }}
+        >
+          FULLSTACK DEVELOPER
+        </div>
+
+        {/* Row 2 - Upper middle */}
+        <div 
+          className="absolute font-black tracking-tight"
+          style={{
+            fontSize: 'clamp(6rem, 16vw, 22rem)',
+            lineHeight: '0.85',
+            color: '#14b8a6',
+            opacity: '0.05',
+            fontFamily: 'Inter, -apple-system, sans-serif',
+            fontWeight: '900',
+            top: '15%',
+            right: '-8%',
+            transform: 'rotate(-15deg)',
+            zIndex: 1,
+            whiteSpace: 'nowrap'
+          }}
+        >
+          MACHINE LEARNING
+        </div>
+
+        {/* Row 3 - Center */}
+        <div 
+          className="absolute font-black tracking-tight"
+          style={{
+            fontSize: 'clamp(7rem, 17vw, 23rem)',
+            lineHeight: '0.85',
+            color: '#06b6d4',
+            opacity: '0.055',
+            fontFamily: 'Inter, -apple-system, sans-serif',
+            fontWeight: '900',
+            top: '38%',
+            left: '-6%',
+            transform: 'rotate(-15deg)',
+            zIndex: 1,
+            whiteSpace: 'nowrap'
+          }}
+        >
+          AI ENGINEER SYSTEMS
+        </div>
+
+        {/* Row 4 - Lower middle */}
+        <div 
+          className="absolute font-black tracking-tight"
+          style={{
+            fontSize: 'clamp(6rem, 15vw, 21rem)',
+            lineHeight: '0.85',
+            color: '#475569',
+            opacity: '0.06',
+            fontFamily: 'Inter, -apple-system, sans-serif',
+            fontWeight: '900',
+            top: '58%',
+            right: '-10%',
+            transform: 'rotate(-15deg)',
+            zIndex: 1,
+            whiteSpace: 'nowrap'
+          }}
+        >
+          DEEP LEARNING DATA
+        </div>
+
+        {/* Row 5 - Bottom */}
+        <div 
+          className="absolute font-black tracking-tight"
+          style={{
+            fontSize: 'clamp(7rem, 18vw, 24rem)',
+            lineHeight: '0.85',
+            color: '#14b8a6',
+            opacity: '0.05',
+            fontFamily: 'Inter, -apple-system, sans-serif',
+            fontWeight: '900',
+            bottom: '-8%',
+            left: '-4%',
+            transform: 'rotate(-15deg)',
+            zIndex: 1,
+            whiteSpace: 'nowrap'
+          }}
+        >
+          NEURAL NETWORKS AI
+        </div>
+
+        {/* Row 6 - Extra coverage top right */}
+        <div 
+          className="absolute font-black tracking-tight"
+          style={{
+            fontSize: 'clamp(5rem, 14vw, 19rem)',
+            lineHeight: '0.85',
+            color: '#64748b',
+            opacity: '0.045',
+            fontFamily: 'Inter, -apple-system, sans-serif',
+            fontWeight: '900',
+            top: '78%',
+            left: '20%',
+            transform: 'rotate(-15deg)',
+            zIndex: 1,
+            whiteSpace: 'nowrap'
+          }}
+        >
+          PYTHON REACT NODE
+        </div>
+
+      </div>
+
+      <div className="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="space-y-6"
+          className="space-y-6 relative z-20"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -47,7 +172,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <h1 className="text-5xl md:text-7xl text-slate-900 dark:text-slate-100 mb-4">
+            <h1 className="text-5xl md:text-7xl text-slate-900 dark:text-slate-100 mb-4 font-black">
               Tanish Jagtap
             </h1>
             <h2 className="text-3xl md:text-5xl text-slate-600 dark:text-slate-400">
@@ -95,7 +220,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="relative flex justify-center lg:justify-end"
+          className="relative flex justify-center lg:justify-end z-20"
         >
           <div className="relative w-80 h-80 group">
             {/* Accent border */}
