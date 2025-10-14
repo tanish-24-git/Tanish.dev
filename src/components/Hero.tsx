@@ -84,25 +84,6 @@ export function Hero() {
           style={{
             fontSize: 'clamp(3rem, 10vw, 14rem)',
             lineHeight: '0.9',
-            color: '#64748b',
-            opacity: '0.025',
-            fontFamily: 'Inter, -apple-system, sans-serif',
-            fontWeight: '900',
-            top: '58%',
-            right: '-3%',
-            transform: 'rotate(-8deg)',
-            zIndex: 1,
-            whiteSpace: 'nowrap'
-          }}
-        >
-          DEVELOPER
-        </div>
-
-        <div 
-          className="absolute font-black tracking-tight"
-          style={{
-            fontSize: 'clamp(3rem, 10vw, 14rem)',
-            lineHeight: '0.9',
             color: '#14b8a6',
             opacity: '0.025',
             fontFamily: 'Inter, -apple-system, sans-serif',
