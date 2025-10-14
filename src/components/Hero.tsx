@@ -25,42 +25,34 @@ export function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
-      {/* Background Text Filling Entire Homepage - No Blank Space */}
+      {/* Background Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
         
-        {/* Row 1 - Top */}
-        <div 
-          className="absolute font-black tracking-tight"
-          style={{
-            fontSize: 'clamp(7rem, 18vw, 24rem)',
-            lineHeight: '0.85',
-            color: '#64748b',
-            opacity: '0.06',
-            fontFamily: 'Inter, -apple-system, sans-serif',
-            fontWeight: '900',
-            top: '-8%',
-            left: '-5%',
-            transform: 'rotate(-15deg)',
-            zIndex: 1,
-            whiteSpace: 'nowrap'
-          }}
-        >
-          FULLSTACK DEVELOPER
+        {/* Diamond shapes - left side */}
+        <div className="absolute left-8 md:left-12 top-1/4 space-y-8 md:space-y-12">
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 border-2 border-teal-500/30 rotate-45" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 border-2 border-teal-500/20 rotate-45" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 border-2 border-teal-500/30 rotate-45" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 border-2 border-teal-500/20 rotate-45" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 border-2 border-teal-500/30 rotate-45" />
         </div>
 
-        {/* Row 2 - Upper middle */}
+        {/* Circle - right side */}
+        <div className="absolute right-16 md:right-24 top-1/3 w-24 h-24 md:w-32 md:h-32 border-2 border-teal-500/20 rounded-full" />
+
+        {/* Background Text - Subtle and Clean */}
         <div 
           className="absolute font-black tracking-tight"
           style={{
-            fontSize: 'clamp(6rem, 16vw, 22rem)',
-            lineHeight: '0.85',
+            fontSize: 'clamp(3rem, 10vw, 14rem)',
+            lineHeight: '0.9',
             color: '#14b8a6',
-            opacity: '0.05',
+            opacity: '0.025',
             fontFamily: 'Inter, -apple-system, sans-serif',
             fontWeight: '900',
-            top: '15%',
-            right: '-8%',
-            transform: 'rotate(-15deg)',
+            top: '5%',
+            right: '-3%',
+            transform: 'rotate(-8deg)',
             zIndex: 1,
             whiteSpace: 'nowrap'
           }}
@@ -68,101 +60,78 @@ export function Hero() {
           MACHINE LEARNING
         </div>
 
-        {/* Row 3 - Center */}
         <div 
           className="absolute font-black tracking-tight"
           style={{
-            fontSize: 'clamp(7rem, 17vw, 23rem)',
-            lineHeight: '0.85',
+            fontSize: 'clamp(3rem, 10vw, 14rem)',
+            lineHeight: '0.9',
             color: '#06b6d4',
-            opacity: '0.055',
+            opacity: '0.025',
             fontFamily: 'Inter, -apple-system, sans-serif',
             fontWeight: '900',
-            top: '38%',
-            left: '-6%',
-            transform: 'rotate(-15deg)',
+            top: '32%',
+            left: '-3%',
+            transform: 'rotate(-8deg)',
             zIndex: 1,
             whiteSpace: 'nowrap'
           }}
         >
-          AI ENGINEER SYSTEMS
+          FULL STACK
         </div>
 
-        {/* Row 4 - Lower middle */}
         <div 
           className="absolute font-black tracking-tight"
           style={{
-            fontSize: 'clamp(6rem, 15vw, 21rem)',
-            lineHeight: '0.85',
-            color: '#475569',
-            opacity: '0.06',
+            fontSize: 'clamp(3rem, 10vw, 14rem)',
+            lineHeight: '0.9',
+            color: '#64748b',
+            opacity: '0.025',
             fontFamily: 'Inter, -apple-system, sans-serif',
             fontWeight: '900',
             top: '58%',
-            right: '-10%',
-            transform: 'rotate(-15deg)',
+            right: '-3%',
+            transform: 'rotate(-8deg)',
             zIndex: 1,
             whiteSpace: 'nowrap'
           }}
         >
-          DEEP LEARNING DATA
+          DEVELOPER
         </div>
 
-        {/* Row 5 - Bottom */}
         <div 
           className="absolute font-black tracking-tight"
           style={{
-            fontSize: 'clamp(7rem, 18vw, 24rem)',
-            lineHeight: '0.85',
+            fontSize: 'clamp(3rem, 10vw, 14rem)',
+            lineHeight: '0.9',
             color: '#14b8a6',
-            opacity: '0.05',
+            opacity: '0.025',
             fontFamily: 'Inter, -apple-system, sans-serif',
             fontWeight: '900',
-            bottom: '-8%',
-            left: '-4%',
-            transform: 'rotate(-15deg)',
+            bottom: '8%',
+            left: '-3%',
+            transform: 'rotate(-8deg)',
             zIndex: 1,
             whiteSpace: 'nowrap'
           }}
         >
-          NEURAL NETWORKS AI
-        </div>
-
-        {/* Row 6 - Extra coverage top right */}
-        <div 
-          className="absolute font-black tracking-tight"
-          style={{
-            fontSize: 'clamp(5rem, 14vw, 19rem)',
-            lineHeight: '0.85',
-            color: '#64748b',
-            opacity: '0.045',
-            fontFamily: 'Inter, -apple-system, sans-serif',
-            fontWeight: '900',
-            top: '78%',
-            left: '20%',
-            transform: 'rotate(-15deg)',
-            zIndex: 1,
-            whiteSpace: 'nowrap'
-          }}
-        >
-          PYTHON REACT NODE
+          AI ENGINEER
         </div>
 
       </div>
 
-      <div className="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="space-y-6 relative z-20"
+          className="space-y-5 relative z-20"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-teal-500 font-mono"
+            className="text-teal-500 font-mono text-sm md:text-base"
           >
             Hi, my name is
           </motion.p>
@@ -172,10 +141,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <h1 className="text-5xl md:text-7xl text-slate-900 dark:text-slate-100 mb-4 font-black">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-slate-900 dark:text-slate-100 mb-3 font-black leading-tight">
               Tanish Jagtap
             </h1>
-            <h2 className="text-3xl md:text-5xl text-slate-600 dark:text-slate-400">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl text-slate-600 dark:text-slate-400 leading-tight">
               I build intelligent systems.
             </h2>
           </motion.div>
@@ -184,7 +153,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
+            className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
           >
             I'm an AI & Data Science student specializing in Machine Learning, Deep Learning, 
             LLMs, and Generative AI. Currently focused on building scalable, intelligent 
