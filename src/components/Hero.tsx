@@ -101,18 +101,19 @@ export function Hero() {
       </div>
 
       <div className="max-w-6xl w-full mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
-        {/* Left Content */}
+        {/* Left Content - Optimized Text Sizes */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="space-y-5 relative z-20"
+          className="space-y-6 relative z-20"
         >
+          {/* Hi my name is - Small intro text */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-teal-500 font-mono text-sm md:text-base"
+            className="text-teal-500 font-mono text-base md:text-lg"
           >
             Hi, my name is
           </motion.p>
@@ -121,35 +122,41 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
+            className="space-y-4"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl text-slate-900 dark:text-slate-100 mb-3 font-black leading-tight">
+            {/* Main heading - Bold and prominent */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 dark:text-slate-100 font-black leading-tight tracking-tight">
               Tanish Jagtap
             </h1>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl text-slate-600 dark:text-slate-400 leading-tight">
+            
+            {/* Subheading - Slightly smaller but still prominent */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-slate-600 dark:text-slate-400 leading-tight font-semibold">
               I build intelligent systems.
             </h2>
           </motion.div>
 
+          {/* Description paragraph - Comfortable reading size */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
+            className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed font-normal"
           >
             I'm an AI & Data Science student specializing in Machine Learning, Deep Learning, 
             LLMs, and Generative AI. Currently focused on building scalable, intelligent 
             systems that combine cutting-edge research with practical engineering.
           </motion.p>
 
+          {/* Action buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-wrap gap-4 pt-4"
+            className="flex flex-wrap gap-4 pt-6"
           >
             <Button
               onClick={() => scrollToSection("projects")}
-              className="bg-teal-500 hover:bg-teal-600 text-white border-2 border-teal-500 group"
+              className="bg-teal-500 hover:bg-teal-600 text-white border-2 border-teal-500 group px-6 py-3 text-base"
             >
               View My Work
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -157,7 +164,7 @@ export function Hero() {
             <Button
               variant="outline"
               onClick={downloadResume}
-              className="border-2 border-teal-500 text-teal-500 hover:bg-teal-500/10"
+              className="border-2 border-teal-500 text-teal-500 hover:bg-teal-500/10 px-6 py-3 text-base"
             >
               <Download className="mr-2" size={18} />
               Resume
